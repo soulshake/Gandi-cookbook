@@ -35,9 +35,11 @@ If successful, the following screen will request you either click the confirmati
 
 ### "Authentication failed"
 
+  ```
   Server denied POP3 access for the given username and password.
   Server returned error: "Authentication failed."
-
+  ```
+  
   * You may have only entered your username, whereas you need to enter the whole email address.
   * You may be entering the wrong password.
   * You may be trying to add a forwarding address instead of a mailbox.
@@ -48,33 +50,41 @@ You can only set up 5 external POP accounts in Gmail. Consider using a [forwardi
 
 ### "We were unable to locate the other domain."
 
-  **There was a problem connecting to mail.yourdomain.tld
+  ```
+  There was a problem connecting to mail.yourdomain.tld
   Server returned error: "We were unable to locate the other domain.
-  Please contact your other provider."**
+  Please contact your other provider."
+  ```
 
 Replace `mail.yourdomain.tld` with `mail.gandi.net`.
 
 ### "SSL protocol error."
 
-  **There was a problem connecting to mail.gandi.net
+  ```
+  There was a problem connecting to mail.gandi.net
   Server returned error: "SSL protocol error. Please try disabling SSL, 
-  or contact your other provider to verify the correct port settings."**
+  or contact your other provider to verify the correct port settings."
+  ```
 
 You may have selected "Always use a secure connection (SSL) when retrieving mail" but did not select the correct port for using SSL.
 
 ### "Unable to process the account info."
 
-  **Server denied POP3 access for the given username and password.
-  Server returned error: "Unable to process the account info."**
-
+  ```
+  Server denied POP3 access for the given username and password.
+  Server returned error: "Unable to process the account info."
+  ```
+  
 This error can occur when the wrong port is selected for a given configuration.
 
 ### "There was a problem connecting to mail.gandi.net"
 
-  **There was a problem connecting to mail.gandi.net
+  ```
+  There was a problem connecting to mail.gandi.net
   Server returned error: "Missing +OK response upon connecting to the 
   server: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS 
-  ID ENABLE AUTH=PLAIN] Dovecot ready."**
+  ID ENABLE AUTH=PLAIN] Dovecot ready."
+  ```
 
 You may be trying to use an IMAP port. Gmail does not support IMAP import.
 
