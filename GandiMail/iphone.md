@@ -3,15 +3,15 @@
 Setting up your iPhone for Gandi mail just takes a minute. Here's what to do:
 
 1.  Go to **Settings**, then
-2.  **Mail, Contacts, Calendars**, then
-3.  Click **Add Account...**
-4.  Choose **Other**
-5.  Select **Add Mail Account**" under **Mail**
+2.   **Mail, Contacts, Calendars**, then
+3.   Click **Add Account...**
+4.   Choose **Other**  
+5.   Select **Add Mail Account**" under **Mail**  
 
-    Here, you will just enter the information as requested. I am providing some example values below, you will need to replace them with your own:
-    - Name: `Jon Doe`
-    - Address: `jon@example.com`
-    - Password: `yourpasswd`
+     Here, you will just enter the information as requested. I am providing some example values below, you will need to replace them with your own:
+    - Name: **`Jon Doe`**
+    - Address: **`jon@example.com`**
+    - Password: **`yourpasswd`**
     - Description: will be filled in automatically, but can be anything
 
 6. Click "**Next**"
@@ -21,19 +21,18 @@ Setting up your iPhone for Gandi mail just takes a minute. Here's what to do:
 ### Incoming Mail Server
 
 -  Host Name: `mail.gandi.net`
--  User Name: `joe@example.com`
--  Password: `yourpasswd`
+-  User Name: **`joe@example.com`**
+-  Password: **`yourpasswd`**
  
 ### Outgoing Mail Server
 
 -  Host Name: `mail.gandi.net`
--  Username: `joe@example.com`
--  Password: `yourpasswd`
+-  Username: **`joe@example.com`**
+-  Password: **`yourpasswd`**
 
-8. Click "**Save**". 
+Click "**Save**". 
 
-
-It will not check the configuration and will display the message "Verifying" at the top. This process can take about 30 seconds. When complete, it will bring you back to the screen that shows your email accounts.
+It will now check the configuration and will display the message "Verifying" at the top. This process can take about 30 seconds. When complete, it will bring you back to the screen that shows your email accounts.
 
 
 ## Troubleshooting
