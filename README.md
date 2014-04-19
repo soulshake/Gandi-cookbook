@@ -1,4 +1,4 @@
-Gandi-guides
+The Gandi cookbook
 ============
 
 - Developer resources
