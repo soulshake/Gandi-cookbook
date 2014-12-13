@@ -1,0 +1,4 @@
+{% if display_github %}
+  <li><a href="https://github.com/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}.rst">
+    Show on GitHub</a></li>
+{% endif %}
