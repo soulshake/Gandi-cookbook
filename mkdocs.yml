@@ -1,4 +1,7 @@
 site_name: Gandi Cookbook
 site_description: Experimental community documentation
 
+display_github: True
+github_user: soulshake
+github_repo: Gandi-cookbook
 repo_url: https://github.com/soulshake/Gandi-cookbook
