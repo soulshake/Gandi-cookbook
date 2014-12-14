@@ -16,6 +16,10 @@ This tutorial will be useful if you:
 
 We're using the [Gandi CLI](http://cli.gandi.net) for this tutorial, but you can also perform these steps within your Gandi account.
 
+## Warning
+
+Simple Hosting is not designed for use of git from within the instance. It only partially works and even the things we're doing below are very fragile. Do not make any changes to files directly on your instance, or you will get stuck and have to start over.
+
 ### Create a PHP/MySQL Simple Hosting Instance
 
     $ gandi paas create --name squirrels --type phpmysql --vhosts squirrels.gandi.xyz
@@ -30,10 +34,24 @@ The following command will activate the console and automatically open a connect
 
 Clone the repo into the `htdocs/` directory:
 
-    $ cd /srv/data/web/vhosts/www.squirrel.li/htdocs
+    $ cd /srv/data/web/vhosts/squirrels.gandi.xyz/htdocs
     $ rm index.html                                               # Because the directory has to be empty first
     $ git clone https://github.com/soulshake/squirrels.git .      # Note the dot at the end
+    $ la -la
 
+In my case, the output of `la -la` looks like this:
+
+    hosting-user@squirrels:~/web/vhosts/squirrels.gandi.xyz/htdocs$ ls -la
+    total 9
+    drwxrwxr-x 4 hosting-user hosting-user   7 Dec 14 22:52 .
+    drwxrwxr-x 3 root         hosting-user   3 Dec 14 07:36 ..
+    drwxr-xr-x 8 hosting-user hosting-user  15 Dec 14 22:52 .git
+    -rw-r--r-- 1 hosting-user hosting-user  79 Dec 14 22:48 README.md
+    drwxr-xr-x 2 hosting-user hosting-user   3 Dec 14 22:48 images
+    -rw-r--r-- 1 hosting-user hosting-user 101 Dec 14 22:52 index.html
+    -rwxr-xr-x 1 hosting-user hosting-user 318 Dec 14 22:49 pull.php
+
+See `pull.php` above? It's there in the sample repo we're using for this tutorial, but you'll need to make one.
 Create a PHP file (we'll call ours `pull.php`) with the following contents:
 
 ```
@@ -44,9 +62,13 @@ echo "hello!";                      // So you can confirm the file is in the rig
 ?>
 ```
 
+Make sure the file is executable:
+
+    $ chmod +x pull.php
+
 Check that everything is working correctly by browsing to the URL corresponding to `pull.php`. In our case, it looks like this:
 
-    http://www.squirrels.gandi.xyz/pull.php
+    http://squirrels.gandi.xyz/pull.php
 
 ![screenshot](http://ss.squirrel.li/image/3N0v3n1I2S1o "pull.php")
 
@@ -56,6 +78,6 @@ Click "Add webhook" and paste the path to your .php file in the "Payload URL" fi
 
 ![screenshot](http://ss.squirrel.li/image/1U1G3l133O3O)
 
-Now, every time your repo is updated, your website will be, too!
+It may take a few minutes to start working due to the Varnish cache. Thereafter, note that changes will still take about a minute to be visible unless you purge the cache manually.
 
-Note that changes will still take about a minute to be visible unless you purge the cache manually.
+Now, every time your repo is updated, your website will be, too!
