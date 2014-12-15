@@ -37,9 +37,9 @@ Clone the repo into the `htdocs/` directory:
     $ cd /srv/data/web/vhosts/squirrels.gandi.xyz/htdocs
     $ rm index.html                                               # Because the directory has to be empty first
     $ git clone https://github.com/soulshake/squirrels.git .      # Note the dot at the end
-    $ la -la
+    $ ls -la
 
-In my case, the output of `la -la` looks like this:
+In my case, the output of `ls -la` looks like this:
 
     hosting-user@squirrels:~/web/vhosts/squirrels.gandi.xyz/htdocs$ ls -la
     total 9
