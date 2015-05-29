@@ -37,9 +37,9 @@ For the purposes of this tutorial, it's recommended that you answer the installe
 - Optional default time zone [default America/Chicago]: 
 - Activate Django timezone support (choices: yes, no) [default yes]: yes
 - Activate CMS permission management (choices: yes, no) [default yes]: yes
-- Use Twitter Bootstrap Theme (choices: yes, no) [default no]: **yes***
-Use custom template set [default no]: no
-- Load a starting page with examples after installation.Choose "no" if you use a custom template set. (choices: yes, no) [default no]: **yes***
+- Use Twitter Bootstrap Theme (choices: yes, no) [default no]: **yes**
+- Use custom template set [default no]: no
+- Load a starting page with examples after installation.Choose "no" if you use a custom template set. (choices: yes, no) [default no]: **yes**
 
 
 ## create wsgi.py
