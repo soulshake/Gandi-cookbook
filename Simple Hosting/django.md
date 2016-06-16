@@ -41,6 +41,9 @@ For the purposes of this tutorial, it's recommended that you answer the installe
 - Use custom template set [default no]: no
 - Load a starting page with examples after installation.Choose "no" if you use a custom template set. (choices: yes, no) [default no]: **yes**
 
+## Collect static files
+
+    $ python manage.py collectstatic
 
 ## create wsgi.py
 
